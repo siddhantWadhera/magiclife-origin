@@ -1,5 +1,255 @@
 // Every page should have a class on the body
 // Scope that in each file at the start
-._home {
-  
+#main{
+	.home-content{
+		display:none;
+	}
+	.main-holder{		
+		#sidebar{
+			margin-top:1%;
+			width:100%;
+			.box-form .col .box-form input, .box-form .selectArea, .box-form label{
+				float: left;
+			}
+			.box-form .radioArea, .box-form .radioAreaChecked, .box-form .checkboxArea, .box-form .checkboxAreaChecked {
+				margin: 6px 4px 0 0;
+			}
+			.box-form .date, .Tx-Formhandler .date, #servicepanel .date, .tx-srfeuserregister-pi1 .date, .tt-products .date {
+				border: none;
+				margin: 0 0 0 0;
+				padding: 5px;
+				width: 57%;
+				color: #545454;
+				float:none;
+				border-radius: 5px 5px 0px 0px;
+			}
+			.box-form .datepicker, form .datepicker {
+				position: absolute;
+				background: image-url('ico-table.gif') no-repeat;
+				width: 18px;
+				height: 20px;
+				text-indent: -9999px;
+				overflow: hidden;
+			}
+			.box-form {
+				overflow: hidden;
+				//background: $color2;
+				ul {
+					list-style: none;
+					-webkit-padding-start: 0px;
+				}
+				.box-form-tabset{
+					margin: 0 0 0 1px;
+					list-style:none;
+					li {
+						font-size: $font_size;
+						line-height: 14px;
+						font-weight: bold;
+						display:inline-block;
+						width:30% !important;	
+						a{
+							display: block;
+							//background: image-url('tab-3-l.gif') no-repeat 0 -45px;
+							text-align: center;
+							height: 41px;
+							overflow: hidden;
+							text-decoration: none;
+							color: #1480ee;
+							width:100% !important;
+							background: -webkit-gradient(linear,left top,left bottom,color-stop(0, #FCFCFC),color-stop(1, #EDEDED));
+							background: -o-linear-gradient(bottom, #FCFCFC 0%, #EDEDED 100%);
+							background: -moz-linear-gradient(bottom, #FCFCFC 0%, #EDEDED 100%);
+							background: -webkit-linear-gradient(bottom, #FCFCFC 0%, #EDEDED 100%);
+							background: -ms-linear-gradient(bottom, #FCFCFC 0%, #EDEDED 100%);
+							background: linear-gradient(to bottom, #FCFCFC 0%, #EDEDED 100%);
+							border-radius: 5px 5px 0px 0px;							
+						}
+					}
+					li.active {
+						z-index: 100;
+						a {
+							font-size: $font_active;
+							//background-position: 0 0;
+							color: #262626;
+							background: $color2;
+						}
+					}
+				}
+				.box-form-tabset li:first-child span {
+					padding: 9px 0 18px;
+				}
+				.box-form-tabset li.active:first-child span {
+					padding: 10px 0 17px;
+				}
+				.box-form-tabset li.active span {
+					//background-position: 100% 0;
+				}
+				.box-form-tabset a span {
+					display: block;
+					//background: image-url('tab-3-r.gif') no-repeat 100% -45px;
+					padding: 15px 0 12px;
+					cursor: pointer;
+				}
+				
+				.box-form-content {
+					border: 1px solid #d7ccae;
+					padding: 7px 14px 38px 15px;
+					border-top: none;
+					overflow: hidden;
+					height: auto;
+					font-size: $font_size;
+					line-height: 27px;
+					background: $color2;
+					fieldset{
+						border:0;
+						-webkit-margin-start: 0px;
+						-webkit-padding-start: 0em;
+						-webkit-margin-end: 0px;
+						-webkit-padding-after: 0em;
+						-webkit-padding-end: 0em;
+					}
+				}		
+				.field {
+					padding: 7px 0 11px;
+					width: 100%;
+					overflow: hidden;
+					content:' ';
+					display:block;
+					border-bottom:2px solid #d0d0d0;
+					
+					
+					.row,.date-input{
+						width: 100%;
+						overflow: hidden;
+						margin-bottom: 3px;
+					}
+					label{
+						font-weight: bold;
+						width: 40%;
+					}
+					.row{
+						.outtaHere {
+							display:none;
+						}
+						.label-4{
+							width:38%;
+						}
+						.tip {
+							display: block;
+							cursor: pointer;
+							overflow: hidden;
+						}
+						p{
+							width:90%;
+							float:left;
+						}
+						.info-link {
+							position: relative;
+							float: left;
+							margin: 5px 5px 0 0;
+							background: image-url('ico-info.gif') no-repeat;
+							width: 17px;
+							height: 17px;
+							text-indent: -9999px;
+						}
+					
+						.selectArea{
+							position: relative;
+							height: 27px;
+							float: left;
+							color: #545454;
+							font-size: 12px;
+							line-height: 27px;
+							width:60% !important;
+							border-radius: 5px 5px 0px 5px;
+							background: #FFFFFF;
+							.center {
+								height: 27px;
+								line-height: 27px;
+								display: block;
+								padding: 0 25px 0 6px;
+							}
+							a.selectButton {
+								position: absolute;
+								top: 0;
+								right: 0;
+								width: 100%;
+								height: 100%;
+								background: image-url('btn-select.gif') no-repeat 100% 0;
+								width: 21px;
+								height: 27px;
+								
+							}
+						}
+						.select-3{
+							width:33% !important;
+						}
+						.half-col:first-child {
+							margin: 0;
+						}
+						.half-col{
+							width: 47% !important;
+							margin: 0 0 0 5px;
+						}
+						.radioArea, .radioAreaChecked {
+							position: relative;
+							float: left;
+							width: 15px !important;
+							height: 16px;
+							background: image-url('radio.gif') no-repeat;
+							overflow: hidden;
+						}
+						.radioAreaChecked {
+							background-position: 0 -16px;
+						}
+					}
+					
+				}
+				.field:last-child {
+					border: none;
+				}
+				
+				
+			}
+		}
+	
+	}
+
 }
+// hiding all  the content used in tool tip date picker etc.
+.tooltip{
+	display:none;
+}
+#ui-datepicker-div{
+	display:none;
+}
+.optionsDivInvisible {
+display: none;
+}
+.optionsDivInvisible, .optionsDivVisible {
+	position: absolute;
+	background-color: #fff;
+	border: 1px solid #cbcbcb;
+	z-index: 1100;
+	font-size: 11px;
+	ul{
+		-webkit-padding-start: 0px;
+		-webkit-margin-before: 0em;
+		-webkit-margin-after: 0em;
+	}
+}
+.optionsDivVisible a {
+	color: #6d6d6d;
+	overflow: hidden;
+	text-decoration: none;
+	display: block;
+	height: 1%;
+	padding: 2px;
+}
+.optionsDivScroll ul {
+	height: 205px;
+	overflow: auto !important;
+}
+/*#optionsDiv2,#optionsDiv3,#optionsDiv4,#optionsDiv5,#optionsDiv6,#optionsDiv7,#optionsDiv8,#optionsDiv9{
+	display:none;
+}*/

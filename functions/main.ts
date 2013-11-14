@@ -264,12 +264,12 @@
   $(".//img|.//script[@src]") {
     # GOTCHAS :: Watch out for captcha images, they most likely should
     # not be absolutized
-    $src = fetch("./@src") {
-			trim()
-		}
+    $src = fetch("./@src")
     match($rewriter_url) {
       not(/false/) {
         # Do nothing :: Use base tag value
+        $base_found = "true "
+		
       }
       else() {
         $rewriter_url = $source_host
@@ -279,15 +279,19 @@
     match($src, /\A(?![a-z]+\:)(?!\/\/)(?!\z)/) {
       attribute("src") {
         value() {
-					trim()
           match($src) {
             with(/^\//) {
               # host-relative URL: just add the host
               prepend(concat("//", $rewriter_url))
             }
             else() {
+              match($base_found) {
+                with(/false/) {
+					
               # path-relative URL: add the host and the path
               prepend(concat("//", $rewriter_url, $slash_path))
+                }
+              }
             }
           }
         }

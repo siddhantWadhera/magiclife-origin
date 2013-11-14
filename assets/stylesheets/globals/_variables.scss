@@ -1,6 +1,50 @@
 
-// Vertical Rhythm
-$base-font-size: 13px;
-$base-line-height: 24px;
-@include establish-baseline();
+$color1 : #8cd6f1; //background -color
+$color2 : #f4e9d5; // background-color for the main search form 
+$color3 : #D74401; //header border color
+$color4 : #5f0f02; //border color for list
+$color5 : #fdc400; //border color between the main tabs in header
+$color6 : #d7ccae; //border color for the club finder search .
 
+
+//font-size
+$font_size:12px;
+$font_active:$font_size+4px;
+$date_font:12px;
+
+//header sizes
+$h1_size  : $font_size+9px;
+$h2_size  : $font_size+6px;
+
+//background
+$background1 : #90d5f2;
+$background2 : #ffffff;
+$background3 : #e6e6e6;
+$background4 : #f7f3e7; //content background
+
+
+
+
+// borders
+$border1 : 1px solid $color1;
+$border2 : 1px solid $color1;
+$border3 : 1px solid $color1;
+$border4 : 1px solid $color1;
+$border5 : 1px solid $color2;
+
+
+
+// border radius
+$border_radius : 5px;
+
+// gradients
+
+$grad1: linear-gradient($background2 0, shade($background2, 20%) 100%); //header bottom
+
+
+// text shadow
+$text_shadow: 0 -1px rgba(0,0,0,0.9);
+
+
+// spacing
+$spacing: 10px;
