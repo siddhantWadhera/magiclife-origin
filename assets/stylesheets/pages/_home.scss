@@ -8,8 +8,11 @@
 		#sidebar{
 			margin-top:1%;
 			width:100%;
-			.box-form .col .box-form input, .box-form .selectArea, .box-form label{
+			.box-form .col,.box-form input, .box-form .selectArea, .box-form label{
 				float: left;
+			}
+			.box-form .third-col{
+				float:none;
 			}
 			.box-form .radioArea, .box-form .radioAreaChecked, .box-form .checkboxArea, .box-form .checkboxAreaChecked {
 				margin: 6px 4px 0 0;
@@ -90,7 +93,14 @@
 					padding: 15px 0 12px;
 					cursor: pointer;
 				}
-				
+				.box-form label.highlights img {
+					position: relative;
+					float: left;
+					height: 26px;
+				}
+				.box-form.highlights{
+					width:30%
+				}
 				.box-form-content {
 					border: 1px solid #d7ccae;
 					padding: 7px 14px 38px 15px;
@@ -138,6 +148,9 @@
 							display: block;
 							cursor: pointer;
 							overflow: hidden;
+						}
+						.textArea{
+							width:59%;
 						}
 						p{
 							width:90%;
@@ -191,6 +204,10 @@
 							width: 47% !important;
 							margin: 0 0 0 5px;
 						}
+						.quarter-col{
+							width: 30% !important;
+							margin: 0 0 0 5px;
+						}
 						.radioArea, .radioAreaChecked {
 							position: relative;
 							float: left;
@@ -201,6 +218,20 @@
 						}
 						.radioAreaChecked {
 							background-position: 0 -16px;
+						}
+						.checkboxArea, .checkboxAreaChecked {
+							position: relative;
+							float: left;
+							width: 15px !important;
+							height: 16px;
+							background: image-url("check.gif") no-repeat;
+							overflow: hidden;
+						}
+						.checkboxAreaChecked {
+							background-position: 0 -16px;
+						}
+						.third-col label{
+							width:28%;
 						}
 					}
 					

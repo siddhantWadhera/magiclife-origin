@@ -52,8 +52,116 @@ $("./body") {
 									}	
 								
 								}
-							}	
-						
+							}
+							$("./div[@id='tab-2']"){
+								$(".//fieldset"){
+									$("./div[@class='field'][2]"){
+										$("./div[@class='row'][1]"){
+											%two = this()
+											$("../div[@class='row'][2]") {
+												move_children_to(%two, position("bottom"))
+												remove()
+											}
+										}
+									}
+									$("./div[@class='field'][3]"){
+										$("./div[@class='row'][2]"){
+											$("./div[contains(@class,'half-col')]"){
+												remove_class('half-col')
+												add_class('quarter-col')
+											}
+											insert_bottom("div",class:"quarter-col"){
+												add_class("col")
+												%three = this()
+												$("(.././div[contains(@class,'quarter-col')])[1]") {
+													
+													$("(./div[@class='row'])[5]"){
+														wrap("div",class:"check-group") {
+														  move_children_to(%three, position("top"))
+														  remove()
+														}	
+													}
+													$("(./div[@class='row'])[4]"){
+														wrap("div",class:"check-group") {
+															move_children_to(%three, position("bottom"))
+															remove()
+														}	
+													}
+										
+												}
+												$("(.././div[contains(@class,'quarter-col')])[2]") {
+													$("(./div[@class='row'])[4]"){
+														wrap("div",class:"check-group") {
+															move_children_to(%three, position("bottom"))
+															remove()
+														}	
+													}
+										
+												}
+											}
+										}
+									}
+								}
+							}
+							$("./div[@id='tab-3']"){
+								$(".//fieldset"){
+									$("(./div[@class='field'])[1]"){
+										$("(./div[@class='row'])[1]"){
+											%four = this()
+											$("./div[contains(@class,'quart-col')]") {
+												remove_class("quart-col")
+												add_class("quarter-col")
+											}
+											$("(.././div[@class='row'])[2]"){
+												$("./div[contains(@class,'half-col')]"){
+													remove_class("half-col")
+													add_class("third-col")
+												}
+												move_children_to(%four, position("bottom"))
+												remove()
+											}
+										}
+										$("./div[@id='radio-tab3']"){
+											%six =this()
+											$("./div[contains(@class,'half-col')]"){
+												$("./div[@class='row'][1]"){
+													%seven=this()
+													$("../div[@class='row'][2]") {
+														move_children_to(%seven, position("bottom"))
+														remove()
+													}	
+												}
+												move_children_to(%six, position("bottom"))
+												remove()
+											}
+										}
+									}
+									$("(./div[@class='field'])[2]"){
+										$("./div[@class='row'][1]"){
+											%two = this()
+											$("../div[@class='row'][2]") {
+												move_children_to(%two, position("bottom"))
+												remove()
+											}
+										}
+										$("./div[@class='row'][2]"){
+											%two = this()
+											$("../div[@class='row'][3]") {
+												move_children_to(%two, position("bottom"))
+												remove()
+											}
+										}
+										$("./div[@class='row'][3]"){
+											%two = this()
+											$("../div[@class='row'][4]") {
+												move_children_to(%two, position("bottom"))
+												remove()
+											}
+										}
+									}		
+								}
+							}
+								
 						}
 					}			
 					$("./div[@id='c12316']"){
