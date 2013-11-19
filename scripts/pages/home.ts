@@ -16,37 +16,47 @@ $("./body") {
 							$("./div[@id='tab-1']"){
 								log("------------------tab-1")
 								$(".//fieldset"){
-									$("./div[@class='field'][1]"){
-										$("./div[@class='row'][2]"){
-											#remove()
-											insert_after("div",class:"date-group")
-											$("./div[contains(@class,'half-col')]"){#remove()
-												$("./div[@class='row'][2]") {
-													%one = this()
-													$("../div[@class='row'][3]") {
-														move_children_to(%one, position("bottom"))
-														remove()
-													}
-													wrap("div",class:"date-input") {
-														$("./div") {
-															unwrap()
-														}
-													}
+									#$("./div[@class='field'][1]"){
+										#$("./div[@class='row'][2]"){
+										#	#remove()
+										#	insert_after("div",class:"date-group")
+										#	$("./div[contains(@class,'half-col')]"){#remove()
+										#		$("./div[@class='row'][2]") {
+										#			%one = this()
+										#			$("../div[@class='row'][3]") {
+										#				move_children_to(%one, position("bottom"))
+										#				remove()
+										#			}
+										#			wrap("div",class:"date-input") {
+										#				$("./div") {
+										#					unwrap()
+										#				}
+										#			}
 												  
-												}
+										#		}
 												
-											}
+										#	}
 											
-										}
-										$("./div[@class='date-group']"){
-											move_here('//div[@class="date-input"]')
-										}
+										#}
+										#$("./div[@class='date-group']"){
+										#	move_here('//div[@class="date-input"]')
+										#}
 										
-									}
+									#}
 									$("./div[@class='field'][2]"){
 										$("./div[@class='row'][2]"){
-											$('./p'){
-												move_here(".././div[contains(@class,'quarter-col')][4]","after")
+											
+											$("./div[contains(@class,'col')][4]"){
+												insert_before("div",class:"col"){
+													add_class("quarter-col")
+													move_here(".././div[position()<4]","bottom"){
+														wrap("div",class:"row") {
+															$("./div") {
+																unwrap()
+															}
+														}
+													}
+												}
 											}
 										}
 									}	
@@ -161,69 +171,120 @@ $("./body") {
 									}		
 								}
 							}
-								
 						}
-					}			
-					$("./div[@id='c12316']"){
-						$("./div[@class='links-block']"){
-							attribute('data-ur-set', 'toggler')
-							$("./p[position()=1  ]"){
-								name("div")
-								$("./b"){
-									name("h2")
-									attribute('data-ur-toggler-component', 'button')
-									insert('div', class: 'menu_indicator')
+					}
+					##Ramesh code starts here
+				
+					insert_at("before","div",id:"hmContentDiv")
+					$('./div[@id="c12248"]'){
+						insert_at("before","div",id:"hmDiv")
+					}
+					
+					$('./div[@id="c12420"]'){
+						move_to('../div[@id="hmDiv"]',"top")
+						insert_at("after","div",id:"hrLine")
+						$('.//ul'){
+							$('./li'){
+								$('./a'){
+									insert_at("after","div",id:"hrdottedLine")
 								}
-								insert("div",id:"life-advantages")
-								$("./div[@id= 'life-advantages']"){
-									attribute('data-ur-toggler-component', 'content')
-									move_here("../.././ul[@class='contentlist']","bottom"){
-										#attribute('data-ur-toggler-component', 'content')
-									}
-									move_here("../.././p[position()= last()]","bottom"){
-										$("./a"){
-											#attribute('data-ur-toggler-component', 'content')
-										}
-									}
-								}
-								
 							}
-							$("./p[position()= last()-1]"){
-								remove()
+						}
+					}
+					$('./div[@id="c12316"]'){
+						#$('./div[@class="links-block"]'){
+							#{
+							#	move_to("../../div[@id='c12316']","bottom")
+								#remove()
+							#}
+						#}
+						move_to('../div[@id="hmDiv"]',"bottom")
+					}
+					##Ramesh code ends here	
+				}
+				##Ramesh code starts here
+				$('./div[@id="content"]'){
+					$('./div[@id="c12137"]'){
+						move_to('../.././div[@id="hmContentDiv"]',"top")
+					}
+				}
+				$('./div[@id="hmContentDiv"]'){
+					$('./div[@id="c12137"]'){
+						$('./div[@class="content-posts"]'){
+							$('./div'){
+								#attribute("id","cont1")
+								attribute("id","cont"+index(this()))
 							}
 							
-						
-						}
-						
-					}
-					$("./div[@id='c12420']"){
-						$("./div[@class='top-block']"){
-							attribute('data-ur-set', 'toggler')
-							$("./h2"){
-								attribute('data-ur-toggler-component', 'button')
-								insert('div', class: 'menu_indicator')
+							$('./div[@id="cont1"]'){
+								$('./div[@class="img-holder red"]'){
+									insert_at("after","div",id:"mFamContent")
+								}
+								$('./div[@id="mFamContent"]'){
+									insert("div",id:"mDivText")
+									insert("div",id:"mDivAnchor")
+									$('./div[@id="mDivText"]'){
+										move_here('../.././p',"top")
+										
+									}									
+									$('./div[@id="mDivAnchor"]'){
+										move_here('../.././a',"bottom")
+									}
+								}
 							}
-							$("./ul"){
-								attribute('data-ur-toggler-component', 'content')
-							}		
+							$('./div[@id="cont2"]'){
+								$('./div[@class="img-holder green"]'){
+									insert_at("after","div",id:"mEntertainment")
+								}
+								$('./div[@id="mEntertainment"]'){
+									insert("div",id:"mDivText")
+									insert("div",id:"mDivAnchor")
+									$('./div[@id="mDivText"]'){
+										move_here('../.././p',"top")
+									}	
+									$('./div[@id="mDivAnchor"]'){
+										move_here('../.././a',"bottom")
+									}	
+								}
+							}
+							$('./div[@id="cont3"]'){
+								$('./div[@class="img-holder blue"]'){
+									insert_at("after","div",id:"mSport")
+								}
+								$('./div[@id="mSport"]'){
+									insert("div",id:"mDivText")
+									insert("div",id:"mDivAnchor")
+									$('./div[@id="mDivText"]'){
+										move_here('../.././p',"top")
+									}	
+									$('./div[@id="mDivAnchor"]'){
+										move_here('../.././a',"bottom")
+									}	
+								}
+							}
+							$('./div[@id="cont4"]'){
+								$('./div[@class="img-holder brown"]'){
+									insert_at("after","div",id:"mChillax")
+								}
+								$('./div[@id="mChillax"]'){
+									insert("div",id:"mDivText")
+									insert("div",id:"mDivAnchor")
+									$('./div[@id="mDivText"]'){
+										move_here('../.././p',"top")
+										
+									}	
+									$('./div[@id="mDivAnchor"]'){
+										move_here('../.././a',"bottom")
+									}	
+								}
+							}
 						}
-					
-				
-				
 					}
-					## removing the contact info from home page
-					remove("../../.././/div[@id='topbar']")
-			
+					move_here(".././/div[@id='hmDiv']","before")
 				}
 				
-			
+				##Ramesh code ends here	
 			}	
-	
-		
 		}
 	}
-	#$("./div[@id='ui-datepicker-div']"){
-		#remove_attributes()
-	
-	#}
 }	

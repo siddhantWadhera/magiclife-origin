@@ -25,7 +25,10 @@ $("/html") {
 
   @import sections/header.ts
   @import sections/footer.ts
-
+  $("./body") {
+  	insert_bottom("script", src:asset("javascript/zebra_datepicker.js"))
+  	insert_bottom("script", src:asset("javascript/datepicker.js"))  
+  }
   @import mappings.ts
 }
 

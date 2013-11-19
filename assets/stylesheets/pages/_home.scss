@@ -8,6 +8,9 @@
 		#sidebar{
 			margin-top:1%;
 			width:100%;
+			#tab-1 .label-2{
+				width:51%;
+			}
 			.box-form .col,.box-form input, .box-form .selectArea, .box-form label{
 				float: left;
 			}
@@ -127,7 +130,9 @@
 					display:block;
 					border-bottom:2px solid #d0d0d0;
 					
-					
+					.outtaHere {
+						display:none;
+					}
 					.row,.date-input{
 						width: 100%;
 						overflow: hidden;
@@ -138,9 +143,7 @@
 						width: 40%;
 					}
 					.row{
-						.outtaHere {
-							display:none;
-						}
+						
 						.label-4{
 							width:38%;
 						}
@@ -153,8 +156,9 @@
 							width:59%;
 						}
 						p{
-							width:90%;
+							width:39%;
 							float:left;
+							
 						}
 						.info-link {
 							position: relative;
@@ -194,9 +198,9 @@
 								
 							}
 						}
-						.select-3{
-							width:33% !important;
-						}
+						/*.select-3{
+							width:100% !important;
+						}*/
 						.half-col:first-child {
 							margin: 0;
 						}
@@ -233,6 +237,65 @@
 						.third-col label{
 							width:28%;
 						}
+						.tooltip {
+							width: 95% !important;
+							height: auto;
+							margin: 2%;
+							z-index: 10001;
+							background: #ffffff;
+							color: #333;
+							border: 1px solid #D7CCAE;
+							font-size: $font_size;
+							left:0px !important;
+						}
+						.tooltip h5 {
+							background: #D7CCAE;
+							color: #ffffff;
+							padding: 2px 5px;
+							margin: 0 0 5px 0;
+							font-size: 12px;
+						}
+						.tooltip ul.contentlist {
+							list-style-type: circle;
+							margin: 0 0 0 20px;
+							padding: 5px;
+						}
+						.tooltip ul.contentlist li {
+							list-style-type: circle;
+							margin: 0 0 5px 0;
+						}
+						.tooltip ul li {
+							padding: 2px 5px;
+						}
+						.tooltip p {
+							padding: 0 5px;
+							float:none;
+							width:auto;
+							-webkit-margin-before: 0em;
+						}
+						.tooltip ul.ermlist, .tooltip ul.ermlist1 {
+							margin: 0 0 0 5px;
+							padding: 5px;
+						}
+						.tooltip ul.ermlist1 li span {
+							position: relative;
+							float: left;
+							width: 150px;
+							display: block;
+							height: 100%;
+						}
+						.tooltip ul.ermlist li span {
+							position: relative;
+							float: left;
+							width: 20px;
+							display: block;
+							height: 100%;
+						}
+						.tooltip ul.ermlist li p {
+							position: relative;
+							width: 80%;
+							display: block;
+						}
 					}
 					
 				}
@@ -243,14 +306,375 @@
 				
 			}
 		}
-	
+		/**Ramesh code starts **/
+			#hmDiv{
+				background: #ffffff;
+				margin: 3% auto;
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+				border-bottom-left-radius: 5px;
+				border-bottom-right-radius: 5px;
+				#c12420{
+					padding:1%;
+					.top-block{
+						margin: 1% auto;
+						padding: 1%;
+						h2{
+							margin-top: 1%;
+							margin-bottom:1%;
+							//font-size: $h2-font-size;
+							//line-height: 16px;
+							font-size: 100%;
+							line-height: 150%;
+							color: $font-color;
+							font-weight: bold;
+						}
+						ul{
+							list-style: none;
+							//margin: 0 0 23px;
+							padding: 0;
+							overflow: hidden;
+							li{
+								position: relative;
+								float: left;
+								width: 100%;
+								//line-height: 26px;
+								//font-size: 1.3em;
+								font-size: 100%;
+								line-height: 200%;
+								overflow: hidden;
+								strong{
+									span{
+										font-weight:normal;
+										color: $font-color;
+									}
+								}
+								a{
+									float:right;
+									position: relative;
+									font-weight: bold;
+									//font-size:1.3em;
+									font-size:100%;
+									text-decoration: underline;
+									color: $anchor-tag-color;
+								}
+								#hrdottedLine{
+									height: 1px;
+									background: image-url("bg-dotted.gif");
+									width:100%;
+									//padding-top:3px;
+									//padding-bottom:3px;
+								}
+							}
+						}
+					}
+				}
+				#c12316{
+					padding:1%;
+					.links-block{
+						overflow: hidden;
+						width: 100%;
+						margin: 1% auto;
+						padding: 1%;
+						.bodytext{
+							font:inherit;
+							//font-size:$h2-font-size;
+							font-size:100%;
+							color: $font-color !important;
+							b{
+								font-weight:bold;
+							}
+						}
+						ul.contentlist{
+							list-style:none;
+							padding:0;
+							li{
+								//padding: 0 0 0 20px;
+								padding: 0 0 0 7%;
+								background: image-url("ico-star.gif") no-repeat 0 7px;
+								//line-height: 25px;
+								//font-size: 1.3em;
+								line-height: 25px;
+								font-size: 100%;
+								color: $font-color !important;
+							}
+						}
+						p.bodytext{
+							//font: normal normal 400 14px /20px "PT Sans";
+							font:inherit;
+							color: $font-color !important;
+							a.btn{
+								margin-left: 10%;
+								margin-right: 30%;
+								position: relative;
+								z-index: 100;
+								display: block;
+								font-size: 100%;
+								//line-height: 24px;
+								line-height:150%;
+								color: $font-color;
+								text-align: center;
+								font-weight: bold;
+								cursor: pointer;
+								padding: 0 3px 0 0;
+								background: image-url("btn-3-r.gif") no-repeat 100% 0;
+								text-decoration: none;
+							}
+							a.btn:hover{
+								//background: image-url("btn-3-r-hover.gif") no-repeat 100% 0;
+								//display:block;
+							}
+							a.btn span{
+									display: block;
+									background: image-url("btn-3-l.gif") no-repeat;
+									padding: 5px 0 5px 3px;
+									cursor: pointer;
+							}
+							a.btn:hover span{
+								//background: image-url("btn-3-l-hover.gif") no-repeat;
+								//display:block;
+							}
+							
+						}
+					}
+				}
+				#hrLine{
+					background: #c4c4c4;
+					height: 1px;
+				}
+			}
+			/**Ramesh code ends **/
+		#hmContentDiv{
+				background: #ffffff;
+				margin: 3% auto;
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+				border-bottom-left-radius: 5px;
+				border-bottom-right-radius: 5px;
+			#c12137{
+				margin:1%;
+				padding:1%;
+				display:block;
+				.content-posts
+				{	
+					display:inline-block;
+					margin-top:1%;
+					padding-top:1%;
+					margin-bottom:1%;
+					padding-bottom:1%;
+					.col{
+						position: relative;
+						float: left;
+						vertical-align: bottom;
+						.red
+						{
+							overflow: hidden;
+							margin-bottom:1%;
+							margin-top:1%;
+							position: relative;
+							float: left;
+							width:40%;
+							a{
+								text-decoration: underline;
+								color: #1480ee;
+								outline: 0 none;
+								img{
+									display: block;
+									width:100%;
+								}
+							}
+							strong.caption{
+								position: absolute;
+								padding: 4px 10px;
+								bottom: 18px;
+								//width: 128px;
+								width:100%;
+								//font-size: 12px;
+								//line-height: 16px;
+								font-size: 85%;
+								line-height: 120%;
+								color: #fff;
+								font-weight: bold;
+								background: image-url("page-sprite.png") 0 0;
+							}
+						}
+						#mFamContent{
+							float: right;
+							width: 59%;
+							margin-top:1%;
+						}
+						.green
+						{
+							overflow: hidden;
+							margin-bottom:1%;
+							margin-top:1%;
+							position: relative;
+							float: left;
+							width:40%;
+							a{
+								text-decoration: underline;
+								color: #1480ee;
+								outline: 0 none;
+								img{
+									display: block;
+									width:100%;
+								}
+							}
+							strong.caption{
+								position: absolute;
+								padding: 4px 10px;
+								bottom: 18px;
+								//width: 128px;
+								width:100%;
+								//font-size: 12px;
+								//line-height: 16px;
+								font-size: 85%;
+								line-height: 120%;
+								color: #fff;
+								font-weight: bold;
+								background: image-url("page-sprite.png") 0 -45px;
+							}
+						}
+						#mEntertainment{
+							float: right;
+							width: 59%;
+							margin-top:1%;
+						}
+						.blue
+						{
+							overflow: hidden;
+							margin-bottom:1%;
+							margin-top:1%;
+							position: relative;
+							float: left;
+							width:40%;
+							a{
+								text-decoration: underline;
+								color: #1480ee;
+								outline: 0 none;
+								img{
+									display: block;
+									width:100%;
+								}
+							}
+							strong.caption{
+								position: absolute;
+								padding: 4px 10px;
+								bottom: 18px;
+								//width: 128px;
+								width:100%;
+								//font-size: 12px;
+								//line-height: 16px;
+								font-size: 85%;
+								line-height: 120%;
+								color: #fff;
+								font-weight: bold;
+								background: image-url("page-sprite.png") 0 -90px;
+								
+							}
+						}
+						#mSport{
+							float:right;
+							width:59%;
+							margin-top:1%;
+						}
+						.brown
+						{
+							overflow: hidden;
+							margin-bottom:1%;
+							margin-top:1%;
+							position: relative;
+							float: left;
+							width:40%;
+							a{
+								text-decoration: underline;
+								color: #1480ee;
+								outline: 0 none;
+								img{
+									display: block;
+									width:100%;
+								}
+							}
+							strong.caption{
+								position: absolute;
+								padding: 4px 10px;
+								bottom: 18px;
+								//width: 128px;
+								width:100%;
+								//font-size: 12px;
+								//line-height: 16px;
+								font-size: 85%;
+								line-height: 120%;
+								color: #fff;
+								font-weight: bold;
+								background: image-url("page-sprite.png") 0 -135px;
+							}
+						}
+						#mChillax{
+							float:right;
+							width:59%;
+							margin-top:1%;
+						}
+					}
+				}
+			}
+		}
+		
+		#mDivText{
+			p{
+				display:inline-block;
+				margin:0;
+				padding:0 !important;
+				font: inherit;
+				//font-size: 0.8em;
+				font-size: 85%;
+				line-height: 130%;
+				color: #545454;
+				//line-height:1.5em;
+			}
+		}
+		#mDivAnchor{
+			position:relative;
+			a.btn-more{
+				display: block;
+				position: absolute;
+				top:5%;
+				bottom: 0;
+				//margin:2%;
+				margin-top:1%;
+				
+				height: 28px;
+				background: image-url("btn-2-r.gif") no-repeat 100% 0;
+				padding: 0 4px 0 0;
+				//font-size: 1.0em;
+				//line-height: 16px;
+				font-size:100%;
+				line-height:100%;
+				color: #515151;
+				text-decoration: none;
+				span{
+					position: relative;
+					float: left;
+					width: auto;
+					padding: 6px 9px 6px 13px;
+					background: image-url("btn-2-l.gif") no-repeat;
+					cursor: pointer;
+				}
+			}
+			a.btn-more:hover {
+				background: image-url("btn-2-r-hover.gif") no-repeat 100% 0;
+				color: #1480ee;
+				span {
+					background: image-url("btn-2-l-hover.gif") no-repeat;
+				}
+			}
+		}
+		/**Ramesh code ends **/
 	}
 
 }
 // hiding all  the content used in tool tip date picker etc.
-.tooltip{
-	display:none;
-}
+
 #ui-datepicker-div{
 	display:none;
 }
