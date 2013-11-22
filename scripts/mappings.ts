@@ -31,6 +31,13 @@ match($status) {
         log("--> No page match in mappings.ts")
       }
     }
+	match($host) {
+		log("-------------------------------------------------------> HOST: :  : "  + $host)
+		with(/booking/){
+			log("-------------------------------------------------------> import booking.ts")
+			 #@import pages/booking/booking.ts
+		}
+	}
   }
 
   else() {

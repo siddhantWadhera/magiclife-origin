@@ -2,4 +2,13 @@ body{
 	background:$background1;
 	font:1.2em /1.5em 'PT Sans', sans-serif;
 	overflow-x:hidden;
+	#ui-datepicker-div {
+		z-index: 9999 !important;
+	}
+	ol,ul{
+		list-style:none;
+	}
+	a{
+		color:$anchor-tag-color;
+	}
 }

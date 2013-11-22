@@ -1,5 +1,10 @@
-# $('./body') {
-#   insert_top("header", class: "_header") {
-#     Move stuff here
-#   }
-# }
+$('./body'){
+	$("./div[@id='wrapper']"){
+		$(".//div[@id='header']"){
+			$(".//ul[@class='social']"){
+				log('--------------------------------------------------------------------------> COL : : :')
+
+			}
+		}
+	}
+}	

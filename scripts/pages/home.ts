@@ -4,9 +4,7 @@ $("./body") {
 			$(".//div[@id='content']"){
 				#remove()  #temporary removed.
 				#add_class("home-content")
-				$(".//div[contains(@class,'gallery')]"){
-					remove()
-				}
+				
 			}
 			$("./div[@class='main-holder']"){
 				$("./div[@id='sidebar']"){
@@ -204,6 +202,19 @@ $("./body") {
 				}
 				##Ramesh code starts here
 				$('./div[@id="content"]'){
+					move_here("./div[@id='c12136']","top")
+					$(".//div[contains(@class,'gallery')]"){
+						$sid = index()
+						log('--------------------------------------------------------------> INDEX  : : : ' + $sid )
+						$(".//img") {
+							attribute("width","")
+							attribute("height","")
+						}
+						$("./div[@class = 'switcher']"){
+							remove()
+						}
+					}
+					
 					$('./div[@id="c12137"]'){
 						move_to('../.././div[@id="hmContentDiv"]',"top")
 					}
