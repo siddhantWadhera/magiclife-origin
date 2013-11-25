@@ -1,3 +1,25 @@
-footer._footer {
-
+#wrapper{
+	#footer{
+		.container-holder{
+			background: $color3;
+			#hrdottedLine{
+				height: 1px;
+				background: image-url("bg-dotted.gif");
+				width:100%;
+			}
+			fieldset{
+				@include fieldset;
+			}
+			#footermenu2,#footermenu1{
+				border-bottom: 2px solid #d0d0d0;
+			}
+			.country-list-2{
+				li:first-child + li{
+					#hrdottedLine{
+						display:none;
+					}
+				}
+			}
+		}
+	}
 }

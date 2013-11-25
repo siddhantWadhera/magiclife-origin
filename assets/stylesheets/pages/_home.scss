@@ -7,7 +7,6 @@
 	.main-holder{
 		#content {
 			position: relative;
-			width: 646px;
 			padding: 0 22px 0 22px;
 			.gallery {
 				margin: 0 0 15px;
@@ -16,16 +15,19 @@
 			}
 			.gallery .gallery-frame {
 				position: relative;
-				width: 646px;
-				height: 428px;
+                width: 100%;
 				overflow: hidden;
 			}
 			.gallery .gallery-frame ul {
 				position: relative;
-				width: 99999px;
 				overflow: hidden;
-				-webkit-padding-start: 0px;
-				list-style:none;
+                li {
+                    img {
+                        width: 100%;
+                        margin: 0 auto;
+                    }
+                }
+
 			}
 			.gallery .link-prev, .gallery .link-next {
 				cursor: pointer;
@@ -76,10 +78,6 @@
 			.box-form {
 				overflow: hidden;
 				//background: $color2;
-				ul {
-					list-style: none;
-					-webkit-padding-start: 0px;
-				}
 				.box-form-tabset{
 					margin: 0 0 0 1px;
 					list-style:none;
@@ -150,12 +148,7 @@
 					line-height: 27px;
 					background: $color2;
 					fieldset{
-						border:0;
-						-webkit-margin-start: 0px;
-						-webkit-padding-start: 0em;
-						-webkit-margin-end: 0px;
-						-webkit-padding-after: 0em;
-						-webkit-padding-end: 0em;
+						@include fieldset;
 					}
 				}		
 				.field {
@@ -362,11 +355,10 @@
 							//line-height: 16px;
 							font-size: 100%;
 							line-height: 150%;
-							color: $font-color;
+							color: $color5;
 							font-weight: bold;
 						}
 						ul{
-							list-style: none;
 							//margin: 0 0 23px;
 							padding: 0;
 							overflow: hidden;
@@ -382,7 +374,7 @@
 								strong{
 									span{
 										font-weight:normal;
-										color: $font-color;
+										color: $color5;
 									}
 								}
 								a{
@@ -392,14 +384,14 @@
 									//font-size:1.3em;
 									font-size:100%;
 									text-decoration: underline;
-									color: $anchor-tag-color;
+									color: $color4;
 								}
 								#hrdottedLine{
 									height: 1px;
 									background: image-url("bg-dotted.gif");
 									width:100%;
 									//padding-top:3px;
-									//padding-bottom:3px;
+									//padding-bottom:3px;									
 								}
 							}
 						}
@@ -416,13 +408,12 @@
 							font:inherit;
 							//font-size:$h2-font-size;
 							font-size:100%;
-							color: $font-color !important;
+							color: $color5 !important;
 							b{
 								font-weight:bold;
 							}
 						}
 						ul.contentlist{
-							list-style:none;
 							padding:0;
 							li{
 								//padding: 0 0 0 20px;
@@ -432,13 +423,13 @@
 								//font-size: 1.3em;
 								line-height: 25px;
 								font-size: 100%;
-								color: $font-color !important;
+								color: $color5 !important;
 							}
 						}
 						p.bodytext{
 							//font: normal normal 400 14px /20px "PT Sans";
 							font:inherit;
-							color: $font-color !important;
+							color: $color5 !important;
 							a.btn{
 								margin-left: 10%;
 								margin-right: 30%;
@@ -448,7 +439,7 @@
 								font-size: 100%;
 								//line-height: 24px;
 								line-height:150%;
-								color: $font-color;
+								color: $color5;
 								text-align: center;
 								font-weight: bold;
 								cursor: pointer;
@@ -728,7 +719,6 @@ display: none;
 	z-index: 1100;
 	font-size: 11px;
 	ul{
-		-webkit-padding-start: 0px;
 		-webkit-margin-before: 0em;
 		-webkit-margin-after: 0em;
 	}
