@@ -704,9 +704,14 @@
 	}
 }
 // hiding all  the content used in tool tip date picker etc.
+
+//Fix for test starts
 .tooltip{
 	display:none;
+	background: none; //This is to test
 }
+//Fix for test ends
+
 #ui-datepicker-div{
 	display:none;
 }
