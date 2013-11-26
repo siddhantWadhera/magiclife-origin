@@ -7,9 +7,6 @@
 				background: image-url("bg-dotted.gif");
 				width:100%;
 			}
-			fieldset{
-				@include fieldset;
-			}
 			#footermenu2,#footermenu1{
 				border-bottom: 2px solid #d0d0d0;
 			}

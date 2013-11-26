@@ -18,6 +18,7 @@ match($status) {
     log("--> STATUS: 200")
 
     match($path) {
+	 log('----------------------------------------------------------> PATH : : :' + $path)
       with(/^\/$|^\/\?/) {
         log("--> Importing pages/home.ts in mappings.ts")
         @import pages/home.ts
@@ -34,7 +35,7 @@ match($status) {
 	match($host) {
 		log("-------------------------------------------------------> HOST: :  : "  + $host)
 		with(/booking/){
-			log("-------------------------------------------------------> import booking.ts")
+			
 			 #@import pages/booking/booking.ts
 		}
 	}

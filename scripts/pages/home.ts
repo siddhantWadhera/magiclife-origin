@@ -12,7 +12,7 @@ $("./body") {
 					$(".//div[@class='sidebar-holder']"){
 						$("./div[@class='box-form']"){
 							$("./div[@id='tab-1']"){
-								log("------------------tab-1")
+								
 								$(".//fieldset"){
 									#$("./div[@class='field'][1]"){
 										#$("./div[@class='row'][2]"){
@@ -205,7 +205,7 @@ $("./body") {
 					move_here("./div[@id='c12136']","top")
 					$(".//div[contains(@class,'gallery')]"){
 						$sid = index()
-						log('--------------------------------------------------------------> INDEX  : : : ' + $sid )
+						
 						$(".//img") {
 							attribute("width","")
 							attribute("height","")

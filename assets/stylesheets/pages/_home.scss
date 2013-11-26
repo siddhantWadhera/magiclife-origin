@@ -148,9 +148,7 @@
 					font-size: $font_size;
 					line-height: 27px;
 					background: $color2;
-					fieldset{
-						@include fieldset;
-					}
+					
 				}		
 				.field {
 					padding: 7px 0 11px;
@@ -704,9 +702,8 @@
 	}
 }
 // hiding all  the content used in tool tip date picker etc.
-.tooltip{
-	display:none;
-}
+
+
 #ui-datepicker-div{
 	display:none;
 }
