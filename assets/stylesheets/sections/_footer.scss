@@ -2,7 +2,7 @@
 	#footer{
 		.container-holder{
 			background: $color3;
-			#hrdottedLine{
+			#mw_hrdottedLine{
 				height: 1px;
 				background: image-url("bg-dotted.gif");
 				width:100%;
@@ -12,7 +12,7 @@
 			}
 			.country-list-2{
 				li:first-child + li{
-					#hrdottedLine{
+					#mw_hrdottedLine{
 						display:none;
 					}
 				}

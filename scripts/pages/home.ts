@@ -43,12 +43,11 @@ $("./body") {
 									#}
 									$("./div[@class='field'][2]"){
 										$("./div[@class='row'][2]"){
-											
 											$("./div[contains(@class,'col')][4]"){
-												insert_before("div",class:"col"){
-													add_class("quarter-col")
+												insert_before("div",class:"mw_col"){
+													add_class("mw_quarter-col")
 													move_here(".././div[position()<4]","bottom"){
-														wrap("div",class:"row") {
+														wrap("div",class:"mw_row") {
 															$("./div") {
 																unwrap()
 															}
@@ -58,7 +57,6 @@ $("./body") {
 											}
 										}
 									}	
-								
 								}
 							}
 							$("./div[@id='tab-2']"){
@@ -76,13 +74,12 @@ $("./body") {
 										$("./div[@class='row'][2]"){
 											$("./div[contains(@class,'half-col')]"){
 												remove_class('half-col')
-												add_class('quarter-col')
+												add_class('mw_quarter-col')
 											}
-											insert_bottom("div",class:"quarter-col"){
-												add_class("col")
+											insert_bottom("div",class:"mw_quarter-col"){
+												add_class("mw_col")
 												%three = this()
 												$("(.././div[contains(@class,'quarter-col')])[1]") {
-													
 													$("(./div[@class='row'])[5]"){
 														wrap("div",class:"check-group") {
 														  move_children_to(%three, position("top"))
@@ -91,7 +88,7 @@ $("./body") {
 													}
 													$("(./div[@class='row'])[4]"){
 														wrap("div",class:"check-group") {
-															move_children_to(%three, position("bottom"))
+														move_children_to(%three, position("bottom"))
 															remove()
 														}	
 													}
@@ -100,7 +97,7 @@ $("./body") {
 												$("(.././div[contains(@class,'quarter-col')])[2]") {
 													$("(./div[@class='row'])[4]"){
 														wrap("div",class:"check-group") {
-															move_children_to(%three, position("bottom"))
+														move_children_to(%three, position("bottom"))	
 															remove()
 														}	
 													}
@@ -118,12 +115,12 @@ $("./body") {
 											%four = this()
 											$("./div[contains(@class,'quart-col')]") {
 												remove_class("quart-col")
-												add_class("quarter-col")
+												add_class("mw_quarter-col")
 											}
 											$("(.././div[@class='row'])[2]"){
 												$("./div[contains(@class,'half-col')]"){
 													remove_class("half-col")
-													add_class("third-col")
+													add_class("mw_third-col")
 												}
 												move_children_to(%four, position("bottom"))
 												remove()
@@ -171,20 +168,21 @@ $("./body") {
 							}
 						}
 					}
+					
 					##Ramesh code starts here
 				
-					insert_at("before","div",id:"hmContentDiv")
+					insert_before("div",id:"mw_hmContentDiv")
 					$('./div[@id="c12248"]'){
-						insert_at("before","div",id:"hmDiv")
+						insert_before("div",id:"mw_hmDiv")
 					}
 					
 					$('./div[@id="c12420"]'){
-						move_to('../div[@id="hmDiv"]',"top")
-						insert_at("after","div",id:"hrLine")
+						move_to('../div[@id="mw_hmDiv"]',"top")
+						insert_after("div",id:"mw_hrLine")
 						$('.//ul'){
 							$('./li'){
 								$('./a'){
-									insert_at("after","div",id:"hrdottedLine")
+									insert_after("div",id:"mw_hrdottedLine")
 								}
 							}
 						}
@@ -196,7 +194,7 @@ $("./body") {
 								#remove()
 							#}
 						#}
-						move_to('../div[@id="hmDiv"]',"bottom")
+						move_to('../div[@id="mw_hmDiv"]',"bottom")
 					}
 					##Ramesh code ends here	
 				}
@@ -204,94 +202,91 @@ $("./body") {
 				$('./div[@id="content"]'){
 					move_here("./div[@id='c12136']","top")
 					$(".//div[contains(@class,'gallery')]"){
-						$sid = index()
-						
 						$(".//img") {
 							attribute("width","")
 							attribute("height","")
 						}
-						$("./div[@class = 'switcher']"){
-							remove()
-						}
+						remove("./div[@class = 'switcher']")
 					}
 					
 					$('./div[@id="c12137"]'){
-						move_to('../.././div[@id="hmContentDiv"]',"top")
+						move_to('../.././div[@id="mw_hmContentDiv"]',"top")
 					}
 				}
-				$('./div[@id="hmContentDiv"]'){
+				$('./div[@id="mw_hmContentDiv"]'){
 					$('./div[@id="c12137"]'){
 						$('./div[@class="content-posts"]'){
 							$('./div'){
-								#attribute("id","cont1")
-								attribute("id","cont"+index(this()))
+								attribute("id","mw_cont"+index(this()))
 							}
 							
-							$('./div[@id="cont1"]'){
+							$('./div[@id="mw_cont1"]'){
 								$('./div[@class="img-holder red"]'){
-									insert_at("after","div",id:"mFamContent")
+									insert_after("div",id:"mw_FamContent")
 								}
-								$('./div[@id="mFamContent"]'){
-									insert("div",id:"mDivText")
-									insert("div",id:"mDivAnchor")
-									$('./div[@id="mDivText"]'){
+								$('./div[@id="mw_FamContent"]'){
+									insert("div",id:"mw_DivText")
+									insert("div",id:"mw_DivAnchor")
+									$('./div[@id="mw_DivText"]'){
 										move_here('../.././p',"top")
 										
 									}									
-									$('./div[@id="mDivAnchor"]'){
+									$('./div[@id="mw_DivAnchor"]'){
 										move_here('../.././a',"bottom")
 									}
 								}
 							}
-							$('./div[@id="cont2"]'){
+							$('./div[@id="mw_cont2"]'){
+								log('-------------------------------------------------------> : : : MW_CONT2')
 								$('./div[@class="img-holder green"]'){
-									insert_at("after","div",id:"mEntertainment")
+									log('-------------------------------------------------------> : : : GREEN')
+									insert_after("div",id:"mw_Entertainment")
 								}
-								$('./div[@id="mEntertainment"]'){
-									insert("div",id:"mDivText")
-									insert("div",id:"mDivAnchor")
-									$('./div[@id="mDivText"]'){
+								$('./div[@id="mw_Entertainment"]'){
+									insert("div",id:"mw_DivText")
+									insert("div",id:"mw_DivAnchor")
+									$('./div[@id="mw_DivText"]'){
 										move_here('../.././p',"top")
 									}	
-									$('./div[@id="mDivAnchor"]'){
+									$('./div[@id="mw_DivAnchor"]'){
 										move_here('../.././a',"bottom")
 									}	
 								}
 							}
-							$('./div[@id="cont3"]'){
+							$('./div[@id="mw_cont3"]'){
 								$('./div[@class="img-holder blue"]'){
-									insert_at("after","div",id:"mSport")
+									insert_after("div",id:"mw_Sport")
 								}
-								$('./div[@id="mSport"]'){
-									insert("div",id:"mDivText")
-									insert("div",id:"mDivAnchor")
-									$('./div[@id="mDivText"]'){
+								$('./div[@id="mw_Sport"]'){
+									insert("div",id:"mw_DivText")
+									insert("div",id:"mw_DivAnchor")
+									$('./div[@id="mw_DivText"]'){
 										move_here('../.././p',"top")
 									}	
-									$('./div[@id="mDivAnchor"]'){
+									$('./div[@id="mw_DivAnchor"]'){
 										move_here('../.././a',"bottom")
 									}	
 								}
 							}
-							$('./div[@id="cont4"]'){
+							$('./div[@id="mw_cont4"]'){
 								$('./div[@class="img-holder brown"]'){
-									insert_at("after","div",id:"mChillax")
+									insert_after("div",id:"mw_Chillax")
 								}
-								$('./div[@id="mChillax"]'){
-									insert("div",id:"mDivText")
-									insert("div",id:"mDivAnchor")
-									$('./div[@id="mDivText"]'){
+								$('./div[@id="mw_Chillax"]'){
+									insert("div",id:"mw_DivText")
+									insert("div",id:"mw_DivAnchor")
+									$('./div[@id="mw_DivText"]'){
 										move_here('../.././p',"top")
 										
 									}	
-									$('./div[@id="mDivAnchor"]'){
+									$('./div[@id="mw_DivAnchor"]'){
 										move_here('../.././a',"bottom")
 									}	
 								}
 							}
 						}
 					}
-					move_here(".././/div[@id='hmDiv']","before")
+					move_here(".././/div[@id='mw_hmDiv']","before")
 				}
 				
 				##Ramesh code ends here	

@@ -50,10 +50,10 @@
 			#tab-1 .label-2{
 				width:51%;
 			}
-			.box-form .col,.box-form input, .box-form .selectArea, .box-form label{
+			.box-form .col,.box-form .mw_col,.box-form input, .box-form .selectArea, .box-form label{
 				float: left;
 			}
-			.box-form .third-col{
+			.box-form .mw_third-col{
 				float:none;
 			}
 			.box-form .radioArea, .box-form .radioAreaChecked, .box-form .checkboxArea, .box-form .checkboxAreaChecked {
@@ -161,7 +161,7 @@
 					.outtaHere {
 						display:none;
 					}
-					.row,.date-input{
+					.row,.date-input,.mw_row{
 						width: 100%;
 						overflow: hidden;
 						margin-bottom: 3px;
@@ -236,7 +236,7 @@
 							width: 47% !important;
 							margin: 0 0 0 5px;
 						}
-						.quarter-col{
+						.quarter-col,.mw_quarter-col{
 							width: 30% !important;
 							margin: 0 0 0 5px;
 						}
@@ -262,7 +262,7 @@
 						.checkboxAreaChecked {
 							background-position: 0 -16px;
 						}
-						.third-col label{
+						.mw_third-col label{
 							width:28%;
 						}
 						.tooltip {
@@ -336,7 +336,7 @@
 			}
 		}
 		/**Ramesh code starts **/
-			#hmDiv{
+			#mw_hmDiv{
 				background: #ffffff;
 				margin: 3% auto;
 				border-top-left-radius: 5px;
@@ -386,7 +386,7 @@
 									text-decoration: underline;
 									color: $color4;
 								}
-								#hrdottedLine{
+								#mw_hrdottedLine{
 									height: 1px;
 									background: image-url("bg-dotted.gif");
 									width:100%;
@@ -465,13 +465,13 @@
 						}
 					}
 				}
-				#hrLine{
+				#mw_hrLine{
 					background: #c4c4c4;
 					height: 1px;
 				}
 			}
-			/**Ramesh code ends **/
-		#hmContentDiv{
+			
+		#mw_hmContentDiv{
 				background: #ffffff;
 				margin: 3% auto;
 				border-top-left-radius: 5px;
@@ -525,7 +525,7 @@
 								background: image-url("page-sprite.png") 0 1px;
 							}
 						}
-						#mFamContent{
+						#mw_FamContent{
 							float: right;
 							width: 59%;
 							margin-top:1%;
@@ -562,7 +562,7 @@
 								background: image-url("page-sprite.png") 0 -44px;
 							}
 						}
-						#mEntertainment{
+						#mw_Entertainment{
 							float: right;
 							width: 59%;
 							margin-top:1%;
@@ -600,7 +600,7 @@
 								
 							}
 						}
-						#mSport{
+						#mw_Sport{
 							float:right;
 							width:59%;
 							margin-top:1%;
@@ -637,7 +637,7 @@
 								background: image-url("page-sprite.png") 0 -135px;
 							}
 						}
-						#mChillax{
+						#mw_Chillax{
 							float:right;
 							width:59%;
 							margin-top:1%;
@@ -647,7 +647,7 @@
 			}
 		}
 		
-		#mDivText{
+		#mw_DivText{
 			p{
 				display:inline-block;
 				margin:0;
@@ -660,7 +660,7 @@
 				//line-height:1.5em;
 			}
 		}
-		#mDivAnchor{
+		#mw_DivAnchor{
 			position:relative;
 			a.btn-more{
 				display: block;
