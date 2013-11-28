@@ -9,7 +9,7 @@
 @import "globals/_uranium";
 
 // File for global datepicker stylings
-//@import "globals/_datepicker";
+@import "globals/_datepicker";
 @import "globals/_ui.datepicker";
 @import "globals/_ui.theme";
 @import "globals/_core";
@@ -34,3 +34,4 @@
 
 // Pages
 @import "pages/_home";
+@import "pages/clubs/_clubsList";

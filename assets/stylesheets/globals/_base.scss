@@ -1,7 +1,7 @@
 body{
 	background:$background1;
 	font:1.2em /1.5em 'PT Sans', sans-serif;
-	color:$color5;
+	color:$color6;
 	#ui-datepicker-div {
 		z-index: 9999 !important;
 	}
@@ -22,5 +22,5 @@ body{
 	@-ms-viewport { width: device-width; }
 	@media only screen and (min-device-width: 800px) { html { overflow:hidden; } }
 	html { height:100%; }
-	body { height:100%; margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:16px;}
+	body { height:100%; margin:0; padding:0;}
 	

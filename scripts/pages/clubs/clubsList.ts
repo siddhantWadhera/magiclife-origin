@@ -1,0 +1,62 @@
+$("/html/body"){
+	#remove()
+	#remove('.//br')
+	$(".//div[@id='main']"){
+		$(".//div[@class='main-holder']"){
+			$("./div[@id='content']"){
+				$("./div[@id='c12173']"){
+					
+					$("./div[position()>1]"){
+						remove_attributes()
+						attribute("id","clubBox" + index())
+						attribute("class","club_box")
+					}
+					$("./div[@class='club_box']"){
+						$("./div[@class='headline']"){
+							$("./h2"){
+								$("./br"){
+									remove()
+								}
+							}
+						}
+						$("./div[@class='clubimage']"){
+							$("./img[position()=2]"){
+								attribute("style"){
+									remove()
+								}
+								attribute("id","imgOverlay")
+							}
+						}
+						$("./div[@class='infobox']"){
+							$("./div[@class='left']"){
+								$("./div[@class='rating-block-small']"){
+									$("./div[@class='rating-row']"){
+										$("./strong"){
+											text() {
+											  append("/6")
+											}
+										}
+									}
+								}
+							}
+							$("./div[@class='right']"){
+								$("./strong"){
+									remove()
+								}
+								$("./ul"){
+									remove()
+								}
+								move_here(".././div[@class='left']/div[@class='rating-block-small']/div[@class='rating-panel']","top"){
+									$("./span[@class='rating-info']"){
+										remove()
+									}
+								}
+							}
+						}
+					}
+					move_to("../.././div[@id='sidebar']","after")
+				}
+			}
+		}
+	}
+}
